@@ -55,7 +55,7 @@ body {
   letter-spacing: 0; 
 }
 
-@media (min-width: 900px) {
+@media (min-width: 400px) {
   .hero h1 {
     min-width: 50vw;
     word-spacing: clamp(0px, 5vw, 24px);

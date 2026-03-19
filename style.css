@@ -78,7 +78,7 @@ body {
   margin-top: auto; /* 🔥 THIS pushes it down */
 }
 
-/* Button styling */
+/* HEADER Button styling */
 .btn {
   flex: 1;                 /* 🔥 each button takes equal space */
   /*background: #6200ea;*/
@@ -103,6 +103,7 @@ main {
   margin: 2rem;
 }
 
+/*IN PAGE BUTTON*/
 button {
   background: #6200ea;
   color: white;

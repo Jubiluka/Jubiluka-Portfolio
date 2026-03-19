@@ -44,7 +44,7 @@ body {
 }
 
 .hero h1 {
-  font-size: clamp(3rem, 8vw, 5rem); /*never smaller than 2rem, scales with screen size using 8vw, never bigger than 5rem*/
+  font-size: clamp(2.1rem, 8vw, 5rem); /*never smaller than 2rem, scales with screen size using 8vw, never bigger than 5rem*/
   margin-top: 0.05rem;
   margin-bottom: 0.05rem;
   line-height: 1.05;
@@ -73,12 +73,14 @@ body {
   display: flex;
   gap: 0rem; /*used to be 1*/
   justify-content: center;
+  width: 100%;
 
   margin-top: auto; /* 🔥 THIS pushes it down */
 }
 
 /* Button styling */
 .btn {
+  flex: 1;                 /* 🔥 each button takes equal space */
   background: #6200ea;
   color: white;
   padding: 0.8rem 1.6rem; /* top/bottom, left/right */

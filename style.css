@@ -7,7 +7,7 @@ body {
 }
 
 .hero {
-  height: 25vh;
+  padding: 3rem 1rem;  /* top/bottom, left/right */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -18,8 +18,8 @@ body {
 }
 
 .hero-image {
-  width: 180px;
-  height: 180px;
+  width: 200px;
+  height: 200px;
   border-radius: 50%; /* makes it a circle */
   object-fit: cover; /* prevents stretching */
   margin-bottom: 1.5rem;

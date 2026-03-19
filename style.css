@@ -49,8 +49,8 @@ body {
   margin-bottom: 0.05rem;
   line-height: 1.05;
 
-  width: 33vw;              /* about 1/3 of the screen */
-  min-width: max-content;   /* never shrink tighter than natural text width */
+  width: 50vw;              /* about 1/3 of the screen */
+   /*min-width: max-content;   never shrink tighter than natural text width */
   word-spacing: 1vw;        /* scales with screen width */  /* word-spacing: clamp(0px, 1vw, 24px);*/
 }
 

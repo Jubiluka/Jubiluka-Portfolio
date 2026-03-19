@@ -8,7 +8,6 @@ body {
 
 .hero {
   padding: 3rem 1rem;  /* top/bottom, left/right */
-  display: flex;
   justify-content: center;
   align-items: center;
 

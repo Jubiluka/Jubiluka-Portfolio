@@ -49,11 +49,16 @@ body {
   margin-bottom: 0.05rem;
   line-height: 1.05;
 
-  min-width: 50vw;
   width: fit-content;
   max-width: 100%;
-   /*min-width: max-content;   never shrink tighter than natural text width */
-  word-spacing: 1vw;        /* scales with screen width */  /* word-spacing: clamp(0px, 1vw, 24px);*/
+  word-spacing: clamp(0px, 5vw, 50px);
+  letter-spacing: clamp(0px, 2vw, 50px);
+}
+
+@media (min-width: 900px) {
+  .hero h1 {
+    min-width: 50vw;
+  }
 }
 
 .hero p {

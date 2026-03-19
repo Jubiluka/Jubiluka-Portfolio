@@ -44,7 +44,7 @@ body {
 }
 
 .hero h1 {
-  font-size: clamp(1.2rem, 8vw, 5rem); /*never smaller than 2rem, scales with screen size using 8vw, never bigger than 5rem*/
+  font-size: clamp(2rem, 8vw, 5rem); /*never smaller than 2rem, scales with screen size using 8vw, never bigger than 5rem*/
   margin-top: 0.05rem;
   margin-bottom: 0.05rem;
   line-height: 1.05;

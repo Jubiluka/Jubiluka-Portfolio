@@ -8,7 +8,7 @@ body {
 
 .hero {
   min-height: 20vh; /* or whatever feels right */
-  padding: 0rem 1rem;  /* top/bottom, left/right */
+  padding: 0rem 0rem;  /* top/bottom, left/right */
   justify-content: center;
   align-items: center;  
 
@@ -44,7 +44,7 @@ body {
 }
 
 .hero h1 {
-  font-size: clamp(2.1rem, 8vw, 5rem); /*never smaller than 2rem, scales with screen size using 8vw, never bigger than 5rem*/
+  font-size: clamp(2.5rem, 8vw, 5rem); /*never smaller than 2rem, scales with screen size using 8vw, never bigger than 5rem*/
   margin-top: 0.05rem;
   margin-bottom: 0.05rem;
   line-height: 1.05;
@@ -81,13 +81,18 @@ body {
 /* Button styling */
 .btn {
   flex: 1;                 /* 🔥 each button takes equal space */
-  background: #6200ea;
+  /*background: #6200ea;*/
   color: white;
   padding: 0.8rem 1.6rem; /* top/bottom, left/right */
   text-decoration: none;
   border-radius: 0px; /* 0 = square */
   font-weight: bold;
   transition: 0.2s;
+}
+
+/* Add divider between buttons */
+.btn:not(:first-child) {
+  border-left: 2px solid white;
 }
 
 .btn:hover {

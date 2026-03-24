@@ -279,8 +279,8 @@
     
     <h4>Pathfinding</h4>
     <p>
-    One of the most technically interesting systems I worked on was pathfinding. I implemented logic that allowed characters to navigate the tile-based environment efficiently, 
-      ensuring that movement decisions aligned with the tactical nature of the game.
+    I built a turn-based movement pathfinding system on top of the game’s tile map representation. The implementation performs a breadth-first traversal of adjacent walkable tiles,
+      avoids revisiting previously checked nodes, enforces movement range constraints, and reconstructs the resulting shortest path for both gameplay logic and UI highlighting.
     </p>
     
     <p>

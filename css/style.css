@@ -105,6 +105,15 @@ main {
   margin: 2rem;
 }
 
+main h2,
+main h3,
+main h4,
+main h5,
+main h6,
+main p {
+  text-align: left;
+}
+
 /*IN PAGE BUTTON*/
 button {
   background: #6200ea;

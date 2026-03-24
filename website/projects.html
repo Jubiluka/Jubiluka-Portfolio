@@ -237,8 +237,28 @@
 
     <section class="centered">    
     <h2>Elementokens!</h2>
-    <h4>Build Master | Co-Producer | Programmer | Custum Engine | C++ </h4>
+    <h4>Systems and Gameplay Programmer | Technical Lead | Custum Engine | C++ </h4>
     </section>
+
+    <h3>Available for Download: https://games.digipen.edu/games/elementokens</h3>
+
+    <h3>Overview</h3>
+
+    <p>
+    Elementokens is a 2-player turn-based strategy game where players control wizards on a grid, making decisions about movement, positioning, and abilities each turn. 
+      The goal is to collect spell cards and use them against enemy wizards until there is only one team left standing.
+      The game emphasizes thoughtful planning, as each action affects both the board state and the player’s available options going forward.
+    </p>
+    
+    <p>
+    I worked as a gameplay and systems programmer, building both underlying engine features and the gameplay systems that used them. 
+      My work ranged from animation and UI systems to pathfinding and player interaction, with a strong focus on making systems reusable and easy to integrate.
+    </p>
+    
+    <p>
+    A major goal of my work on this project was to bridge the gap between design and implementation, creating systems that were flexible enough to support evolving gameplay 
+      without requiring constant rewrites.
+    </p>
 
     <h3>Core Systems & Contributions</h3>
     <h4>Animation System</h4>
@@ -252,6 +272,15 @@
     This refactor made it significantly easier to synchronize animations with player actions such as movement and spell casting, 
       and helped reduce tight coupling between rendering and gameplay logic.
     </p>
+    <ul>
+      <li>Designed a component-based animation system integrated into the engine’s ECS architecture</li>
+      <li>Implemented time-based frame progression using delta time for consistent playback</li>
+      <li>Supported looping and non-looping animations with completion state tracking</li>
+      <li>Added sprite-sheet offset support to allow reuse of shared textures</li>
+      <li>Exposed manual frame control (increment, decrement, jump) for gameplay synchronization</li>
+      <li>Decoupled animation logic from rendering and gameplay systems for modularity</li>
+    </ul>
+
     
     
     <h4>UI & Text Rendering</h4>
@@ -262,30 +291,83 @@
     
     <p>
     This system supported dynamic text such as spell descriptions and flavor text, and was later refactored to allow flexible alignment and formatting. 
-      These tools were critical for communicating gameplay information clearly to the player.
+      These tools were critical for communicating gameplay information clearly to the player, as <em>Elementokens!</em> is a very text-heavy game.
     </p>
-    
-    
-    <h4>Spell System Integration</h4>
+
+    <ul>
+      <li>Built a custom text rendering system for both UI-space and world-space text.</li>
+      <li>Supported dynamic attachment of text to game objects so labels and interface elements could follow moving entities.</li>
+      <li>Implemented horizontal and vertical alignment options to improve layout flexibility.</li>
+      <li>Added text box wrapping logic to automatically insert line breaks based on font character widths.</li>
+      <li>Supported font changes, font sizing, color control, and formatted string updates.</li>
+      <li>Generated per-character render data and uploaded it to a shader storage buffer for GPU-driven text rendering.</li>
+    </ul>
+
+    <h4>Context-Sensitive Action Menu</h4>
+
     <p>
-    I implemented the logic and animation integration for the game's spell system. This included ensuring that spell effects were correctly triggered, displayed, 
-      and synchronized with both player input and animation states.
+    I implemented a dynamic context bar that displays only the actions currently available to the player, such as movement, casting, or interacting with objects. 
+      Instead of relying on static UI layouts, the system builds the menu at runtime based on the current game state.
     </p>
     
     <p>
-    This system required careful coordination between UI, animation, and gameplay logic, reinforcing the importance of building systems that can communicate effectively with one another.
+    Each button is generated from a reusable template and paired with a corresponding action, allowing the interface to adapt fluidly as the player’s options change. 
+      As buttons are added or removed, the system automatically recalculates layout and spacing to maintain a clean and readable presentation.
     </p>
     
+    <p>
+    This system improved both usability and clarity by ensuring that players were only presented with relevant choices, reducing visual clutter and reinforcing 
+      the game’s turn-based decision-making flow.
+    </p>
+
+    <ul>
+      <li>Designed a context-sensitive UI system that dynamically displays available player actions at runtime.</li>
+      <li>Built a reusable button framework where each button is paired with a specific gameplay function.</li>
+      <li>Implemented logic to add and remove buttons based on game state (movement, abilities, interactions).</li>
+      <li>Created a layout system that automatically repositions and spaces elements as the menu changes size.</li>
+      <li>Separated UI presentation from gameplay logic using function bindings for button actions.</li>
+      <li>Improved player experience by reducing clutter and surfacing only relevant decisions.</li>
+    </ul>
+
+    <h4>Wizard Gameplay Integration</h4>
+
+    <p>
+    I worked on the wizard gameplay object, which served as one of the main points where the engine’s core systems came together. 
+      The class integrated movement, animation, physics, UI feedback, health and action point management, spell handling, and tile-based interactions into a single controllable unit.
+    </p>
+    
+    <p>
+    For movement, I implemented path-following behavior that consumed a precomputed tile path and moved the wizard step by step across the grid while updating facing direction
+      and animation state. As the unit advanced, it could trigger tile effects, interact with map objects, and update contextual UI depending on the result of the move.
+    </p>
+    
+    <p>
+    I also tied the wizard into turn-based systems such as action points, health bars, spell cards, and contextual targeting. 
+      This made the class a central gameplay bridge between lower-level engine systems and the player-facing tactical experience.
+    </p>
+    <ul>
+      <li>Integrated animation, physics, UI, and gameplay logic into the wizard player-unit class.</li>
+      <li>Implemented tile-by-tile path following using a precomputed path generated by the map system.</li>
+      <li>Updated facing direction dynamically based on movement velocity to keep animation states synchronized with motion.</li>
+      <li>Connected movement to tile interactions, status effects, and tutorial/event checks during traversal.</li>
+      <li>Managed player resources such as health, action points, and spell inventory within the turn-based flow.</li>
+      <li>Linked the wizard to contextual UI systems, including health bars, arrows, targeting checks, and action menus.</li>
+    </ul>
     
     <h4>Pathfinding</h4>
     <p>
-    I built a turn-based movement pathfinding system on top of the game’s tile map representation. The implementation performs a breadth-first traversal of adjacent walkable tiles,
-      avoids revisiting previously checked nodes, enforces movement range constraints, and reconstructs the resulting shortest path for both gameplay logic and UI highlighting.
+    One of the more technically involved systems I implemented was the game's tile-based pathfinding. Because movement occurred on a grid and each tile had the same traversal cost, 
+      I used a breadth-first search approach to expand outward from the starting tile and evaluate valid neighboring positions layer by layer.
     </p>
     
     <p>
-    This system required careful consideration of grid-based movement, valid traversal rules, and performance, particularly as it needed to integrate 
-      seamlessly with turn-based decision making.
+    As the search progressed, I recorded each visited tile along with its distance from the origin. Once the destination tile was found, 
+      I reconstructed the final route by tracing backward through adjacent tiles with decreasing depth values, producing a shortest valid path within the unit's movement range.
+    </p>
+    
+    <p>
+    I also integrated this system into the game's visual feedback by highlighting the resulting path on the board, 
+      helping players understand where their character would move before committing to the action.
     </p>
     
     
@@ -297,6 +379,31 @@
     
     <p>
     As a Build Master, I also helped coordinate final integration efforts across the team, ensuring that all systems worked together cohesively.
+    </p>
+
+    <h3>Key Takeaways</h3>
+    
+    <p>Through this project I gained:</p>
+    
+    <ul>
+      <li>Experience wearing multiple roles simultaneously, including programmer, tech lead, co-producer, and build manager</li>
+      <li>Strong ownership over both technical systems and team direction in a small development team</li>
+      <li>Experience building and working within a custom engine, including designing reusable gameplay and UI systems</li>
+      <li>Confidence leading team meetings and helping maintain communication across programmers and designers</li>
+    </ul>
+    
+    <p>
+    Because our team was small, I often had to step beyond pure programming and help guide both technical and team-oriented decisions. 
+      This included organizing meetings, keeping development on track, and making sure everyone stayed aligned as the project evolved.
+    </p>
+    
+    <p>
+    If I were to revisit this project, I would establish clearer technical guidelines early on, particularly around testing and code integration. 
+      We occasionally ran into issues where large changes were introduced without enough validation, which slowed development and created avoidable bugs.
+    </p>
+    
+    <p>
+    Overall, this project taught me how to take ownership of both systems and team processes, and how to adapt quickly when working in a smaller, more flexible development environment.
     </p>
 
   </main>

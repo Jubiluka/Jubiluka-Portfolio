@@ -149,7 +149,7 @@ ul
   max-width: 100%;
   vertical-align: top;
   cursor: pointer;
-  margin: 0.5em 0;
+  margin: 0.5em auto;
 }
 
 .gallery-frame {

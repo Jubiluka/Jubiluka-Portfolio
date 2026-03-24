@@ -122,6 +122,19 @@ main p
   margin-bottom: 0.4em;
 }
 
+main p + h3,
+main p + h4
+{
+  margin-top: 0.7em;
+  margin-bottom: 0.7em;
+}
+
+main h4 + h2
+{
+  margin-top: 0.25em;
+  margin-bottom: 0.25em;
+}
+
 .centered {
   text-align: center;
 }

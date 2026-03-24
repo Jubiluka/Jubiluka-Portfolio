@@ -1,4 +1,4 @@
-const colorButton = ocument.getElementById("colorButton");
+const colorButton = document.getElementById("colorButton");
 if (colorButton) {
   colorButton.addEventListener("click", () => {
   const colors = ["#fce4ec", "#f3e5f5", "#e3f2fd", "#e8f5e9", "#fff3e0"];

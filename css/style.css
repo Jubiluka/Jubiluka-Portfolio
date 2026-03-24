@@ -125,13 +125,11 @@ main p
 main p + h3,
 main p + h4
 {
-  margin-top: 0.7em;
-  margin-bottom: 0.7em;
+  margin-bottom: 1em;
 }
 
-main h4 + h2
+main h2 + h4
 {
-  margin-top: 0.25em;
   margin-bottom: 0.25em;
 }
 

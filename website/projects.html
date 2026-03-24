@@ -89,7 +89,16 @@
     <p>This system required careful consideration of player freedom vs. game constraints, especially due to the complexity introduced by time travel mechanics.
        We've found that players really enjoyed this particular mechanic and would spend time fiddling with placing objects in random places while thinking about puzzle solutions.
        Restricting or removing this feature often resulted in player dissatisfaction. So I did my best to allow players as much freedom as possible.</p>
-    <!-- ADD PHOTOS!! -->
+
+    <div class="photo-gallery" data-interval="3000">
+      <div class="gallery-frame">
+        <img src="../images/omen/pickup1.png" alt="A video game chair highlighted gold." class="gallery-image active" data-caption="An object that can be picked-up when looked at by the player.">
+        <img src="../images/omen/pickup2.png" alt="The golden 3D outline of a video game chair." class="gallery-image" data-caption="A location that the held object is allowed to be placed down.">
+        <img src="../images/omen/pickup3.png" alt="The red 3D outline of a video game chair." class="gallery-image" data-caption="A location that the held object is NOT allowed to be placed down.">
+    
+        <div class="gallery-caption"></div>
+      </div>
+    </div>
 
     <h4>Object Pushing System</h4>
     <p>I implemented and expanded the pushing mechanic into a designer-friendly and predictable system.</p>
@@ -104,7 +113,15 @@
     </ul>
     <p>This system bridged technical implementation and UX clarity, ensuring puzzles felt fair and readable. Although the biggest struggle with any puzzle that involved pushing objects 
       was ensuring that the object's intended path was free of cosmetic obstructions. I conducted several playtests each time a level's layout was changed to ensure a smooth gameplay experience.</p>
-    <!-- ADD PHOTOS!! -->
+
+    <div class="photo-gallery" data-interval="3000">
+      <div class="gallery-frame">
+        <img src="../images/omen/push1.png" alt="A video game bookshelf with 1 arrow pointing right." class="gallery-image active" data-caption="This pushable bookshelf is sitting right on its push limit.">
+        <img src="../images/omen/push2.png" alt="A video game bookshelf with 2 arrows pointing left and right." class="gallery-image" data-caption="The bookshelf has been moved away from its limit, so new push directions are available.">
+    
+        <div class="gallery-caption"></div>
+      </div>
+    </div>
 
     <h4>Mirror System & Collision Handling</h4>
     <p>One of the most complex systems I worked on was refining mirror behaviour.</p>
@@ -119,7 +136,7 @@
     <p>The mirrors were the most complex mechanic in the game. It was central to the game's core design and had to interact with several different mechanics at once.
       Multiple programmers had a hand in its functionality, so maintaining clear communication and proper code organization was key. 
       This required deep debugging and iteration, especially when integrating with other mechanics like pushing and object placement.</p>
-    <!-- ADD PHOTOS!! -->
+    <!-- ADD GIFS???/VIDEOS???!! -->
 
     <h3>Puzzle Design & Implementation</h3>
     <h4>Kitchen Fire Puzzle (Design + Implementation)</h4>
@@ -137,7 +154,17 @@
       artist create a burner flame to use and worked with him to add enough functionality to interact with the stove prop. I had the designers approve my toggle-switch idea and 
       fully implemented every moving piece and animation relating to this puzzle.</p>
     <p>This puzzle emphasizes my ability to combine <strong>systemic design, player-driven discovery, and cause-and-effect across timelines.</strong></p>
-    <!-- ADD PHOTOS!! -->
+
+    <div class="photo-gallery" data-interval="3000">
+      <div class="gallery-frame">
+        <img src="../images/omen/fire1.png" alt="A burnt and ashen kitchen corner." class="gallery-image active" data-caption="This is what the future kitchen looked like when burnt.">
+        <img src="../images/omen/fire2.png" alt="Burnt Food Ticket [This is too charred to read]" class="gallery-image" data-caption="While the kitchen was burnt, the clues were illegible.">
+        <img src="../images/omen/fire3.png" alt="A clean retro burner over with all four flames lit." class="gallery-image" data-caption="This is the burner oven fully lit. The player must turn the right combination of knobs to turn it off entirely.">
+        <img src="../images/omen/fire4.png" alt="An old but clean kitchen corner with 3 clearly visible Food Tickets." class="gallery-image" data-caption="Once the oven is no longer left on in the past, the ashes disappear and notes become legible.">
+    
+        <div class="gallery-caption"></div>
+      </div>
+    </div>
 
     <h4>Dining Room Puzzle System</h4>
     <p>This puzzle directly follows the <em>Kitchen Fire Puzzle</em>. After finding the now-legible notes in the kitchen detailing each dining guest's food order, the player must search 
@@ -151,7 +178,17 @@
       <li>Assisted in final puzzle setup and mirror navigation constraints</li>
     </ul>
     <p>This system emphasized <strong>modularity and scalability</strong>, allowing designers to easily tweak puzzle conditions.</p>
-    <!-- ADD PHOTOS!! -->
+
+    <div class="photo-gallery" data-interval="3000">
+      <div class="gallery-frame">
+        <img src="../images/omen/dining1.png" alt="3 ticket orders for 6 different meals." class="gallery-image active" data-caption="The 3 Food Tickets specifying each of the 6 guests' orders.">
+        <img src="../images/omen/dining2.png" alt="A dining table with 7 seats set up." class="gallery-image" data-caption="The dining room. Meals had to be served in each of the guests' assigned seats.">
+        <img src="../images/omen/dining3.png" alt="A drawer with a golden key inside." class="gallery-image" data-caption="This key unlocks a box with a clue inside.">
+        <img src="../images/omen/dining4.png" alt="Adeline + Derek (A) kettle sings soft Memories rise with the steam Bound by time's warm threa(d)." class="gallery-image" data-caption="These clues were not supported by the original 'Note' implementation, so I added the functionality for images and horizontal paper.">
+    
+        <div class="gallery-caption"></div>
+      </div>
+    </div>
 
     <h3>Designer, Debbuging, & Development Tools</h3>
     <p>Key contributions:</p>
@@ -161,6 +198,14 @@
       <li>Visualization tools for mechanic tuning</li>
     </ul>
     <p>The main goal for each of these tools was to <strong>reduce iteration time</strong> during development and playtesting. The telemetry in particular required me to <strong>work directly with Unreal Engine's C++ code</strong> in order to properly implement it.</p>
+
+    <div class="photo-gallery" data-interval="3000">
+      <div class="gallery-frame">
+        <img src="../images/omen/debug1.png" alt="A video game level as seen from above and out of bounds." class="gallery-image active" data-caption="One of the game's levels as seen from above thanks to the free-fly mode.">
+    
+        <div class="gallery-caption"></div>
+      </div>
+    </div>
 
     <h3>Challenges & Growth</h3>
     <p>This was the biggest, most diverse team I've ever had the pleasure to work with. Although this meant that the project had more talented people working to make it perfect, 

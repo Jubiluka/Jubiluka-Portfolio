@@ -119,6 +119,12 @@ main p
 main p + h3,
 main p + h4
 {
+  margin-top: 1.6em;
+}
+
+main ul + h3,
+main ul + h4
+{
   margin-top: 2em;
 }
 

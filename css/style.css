@@ -127,6 +127,11 @@ main h2
   margin-bottom: 0.0em;
 }
 
+ul
+{
+    margin: 0;
+}
+
 .centered {
   text-align: center;
 }

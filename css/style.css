@@ -144,12 +144,13 @@ ul
 
 /* PHOTOS */
 .photo-gallery {
-  display: inline-block;
-  width: 420px;
-  max-width: 100%;
-  vertical-align: top;
-  cursor: pointer;
-  margin: 0.5em auto;
+    display: block;
+    text-align: center;
+    width: 630px;
+    max-width: 100%;
+    vertical-align: top;
+    cursor: pointer;
+    margin: 0.5em auto;
 }
 
 .gallery-frame {
@@ -163,7 +164,7 @@ ul
   position: static;
   width: 100%;
   aspect-ratio: 16 / 9;
-  object-fit: cover;
+  object-fit: contain;
   display: none;
 }
 
@@ -177,6 +178,7 @@ ul
   background: #111;
   color: white;
   padding: 0.7em 0.9em;
+  font-size: 0.75rem;
 }
 
 /* Fullscreen overlay */

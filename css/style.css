@@ -108,12 +108,6 @@ main {
 
 main h1,
 main h2,
-{
-  text-align: center;
-}
-
-main h1,
-main h2,
 main h3,
 main h4,
 main p
@@ -125,12 +119,12 @@ main p
 main p + h3,
 main p + h4
 {
-  margin-bottom: 1em;
+  margin-top: 1em;
 }
 
 main h2 + h4
 {
-  margin-bottom: 0.25em;
+  margin-top: 0.0em;
 }
 
 .centered {

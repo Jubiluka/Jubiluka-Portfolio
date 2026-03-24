@@ -112,6 +112,10 @@ main h2,
   text-align: center;
 }
 
+.centered {
+  text-align: center;
+}
+
 /*IN PAGE BUTTON*/
 button {
   background: #6200ea;

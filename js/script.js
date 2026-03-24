@@ -5,7 +5,6 @@ document.getElementById("colorButton").addEventListener("click", () => {
 });
 
 //PHOTO GALLERY CODE vvv
-<script>
 document.addEventListener("DOMContentLoaded", () => {
   const galleries = document.querySelectorAll(".photo-gallery");
 
@@ -157,4 +156,3 @@ document.addEventListener("DOMContentLoaded", () => {
     overlayImg.style.transform = `scale(${currentScale})`;
   }, { passive: false });
 });
-</script>

@@ -238,11 +238,11 @@
     <section class="centered">    
     <h2>Elementokens!</h2>
     <h4>Systems and Gameplay Programmer | Technical Lead | Custom Engine | C++ </h4>
-    </section>
 
     <h3><a href="https://games.digipen.edu/games/elementokens" target="_blank">
     Available for Download!
     </a></h3>
+    </section>
 
     <h3>Overview</h3>
 
@@ -283,7 +283,12 @@
       <li>Decoupled animation logic from rendering and gameplay systems for modularity</li>
     </ul>
 
-    
+    <div class="photo-gallery" data-interval="7000">
+      <div class="gallery-frame">
+        <img src="../images/elem/animation1.gif" alt="A red wizard spinning in circles." class="gallery-image active" data-caption="We didn't have any artists, so our animations were not very complex. But my system doubled as a sprite sheet manager.">
+        <div class="gallery-caption"></div>
+      </div>
+    </div>
     
     <h4>UI & Text Rendering</h4>
     <p>
@@ -304,6 +309,13 @@
       <li>Supported font changes, font sizing, color control, and formatted string updates.</li>
       <li>Generated per-character render data and uploaded it to a shader storage buffer for GPU-driven text rendering.</li>
     </ul>
+
+    <div class="photo-gallery" data-interval="7000">
+      <div class="gallery-frame">
+        <img src="../images/elem/text1.jpg" alt="A dialogue box with campaign information." class="gallery-image active" data-caption="Our game was very text-heavy, so I wanted our text system to include many layout options.">
+        <div class="gallery-caption"></div>
+      </div>
+    </div>
 
     <h4>Context-Sensitive Action Menu</h4>
 
@@ -331,6 +343,14 @@
       <li>Improved player experience by reducing clutter and surfacing only relevant decisions.</li>
     </ul>
 
+    <div class="photo-gallery" data-interval="7000">
+      <div class="gallery-frame">
+        <img src="../images/elem/context1.jpg" alt="A game scene with many options." class="gallery-image active" data-caption="The context menu dynamically changed and resized depending on how many valid options the player had.">
+        <img src="../images/elem/context2.jpg" alt="A game scene with only one option." class="gallery-image active" data-caption="The context menu dynamically changed and resized depending on how many valid options the player had.">
+        <div class="gallery-caption"></div>
+      </div>
+    </div>
+
     <h4>Wizard Gameplay Integration</h4>
 
     <p>
@@ -355,6 +375,13 @@
       <li>Managed player resources such as health, action points, and spell inventory within the turn-based flow.</li>
       <li>Linked the wizard to contextual UI systems, including health bars, arrows, targeting checks, and action menus.</li>
     </ul>
+
+    <div class="photo-gallery" data-interval="7000">
+      <div class="gallery-frame">
+        <img src="../images/elem/wizard1.jpg" alt="A game scene with the player readying an attack." class="gallery-image active" data-caption="The wizards are any player characters. Their system involves keeping track of things such as health and 'Action Points'.">
+        <div class="gallery-caption"></div>
+      </div>
+    </div>
     
     <h4>Pathfinding</h4>
     <p>
@@ -371,6 +398,14 @@
     I also integrated this system into the game's visual feedback by highlighting the resulting path on the board, 
       helping players understand where their character would move before committing to the action.
     </p>
+
+    <div class="photo-gallery" data-interval="7000">
+      <div class="gallery-frame">
+        <img src="../images/elem/pathing1.jpg" alt="A wizards movement options." class="gallery-image active" data-caption="Once clicked, all available movement tiles for that wizard would highlight.">
+        <img src="../images/elem/pathing2.gif" alt="A wizard moving through the game board." class="gallery-image active" data-caption="When a tile is hovered, the path to get to it will be highlighted a lighter color.">
+        <div class="gallery-caption"></div>
+      </div>
+    </div>
     
     <h3>Debugging & Build Systems</h3>
     <p>

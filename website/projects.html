@@ -25,8 +25,154 @@
   </section>
 
   <main>
-    <p>Add Projects here. delete bottom button</p>
-    <button id="colorButton">Change Background</button>
+    <!-- <p>Add Projects here. delete bottom button</p>
+    <button id="colorButton">Change Background</button> -->
+    <h1>Projects</h1>
+    
+    <h2>An Omen in the Mirror</h2>
+    <h4>Gameplay Programmer | Unreal Engine 5 | C++ | Blueprints | Perforce</h4>
+
+    <h3>Overview</h3>
+    <p>An Omen in the Mirror is a 3D narrative puzzle game developed in Unreal Engine 5, where players explore a mysterious mansion and travel between timelines using magical mirrors.</p>
+    <p>Originally conceived as a three-timeline system, the project evolved through team collaboration into a more focused two-timeline experience. 
+      Players take on the role of a reporter investigating Wraith Manor, uncovering its past by physically traversing mirrors and manipulating the environment across time.</p>
+
+    <h3>My Role</h3>
+    <p>I worked primarily as a Gameplay Programmer, while also contributing to design decisions, system architecture, and team coordination.</p>
+    <ul>
+      <li>Implementing core interaction systems</li>
+      <li>Designing and building puzzle mechanics</li>
+      <li>Developing debugging and testing tools</li>
+      <li>Integrating telemetry systems for design analysis</li>
+      <li>Collaborating closely with designers and artists to ensure systems were intuitive and robust</li>
+    </ul>
+
+    <h3>Game Ideation and Pitch</h3>
+    <p>This project began with a concept I developed in order to recruit a team.</p>
+    <p>My initial idea centered around a mansion that existed across three timelines — the past, present, and distant future — where players would solve puzzles by interacting with 
+      each version of the environment. These timelines could be interacted with through mirrors and mirror shards, allowing the player to manipulate time to progress.</p>
+    <p>As the concept evolved, I refined the mechanic so that players would physically travel through mirrors, making the interaction more immersive and easier to understand.
+      I also began shaping the narrative. The three timelines would be as follows: A lively and grand mansion in the past, an abandoned and dilapidated old manor in the present, and
+      a ruined, apocalyptic future. The protagonist would venture deeper into the mansion in search of clues as to what caused the apocalypse and how to prevent it.</p>
+    <p>With this pitch, I developed a presentation featuring my initial concept art to better communicate my vision. I knew I wanted plenty of artists to help bring the mansion's 
+      grandiosity to life. After presenting the game to potential teammates, I sought out and spoke directly with programmers, artists, and designers to gauge interest, 
+      and I conducted several interviews. In the end, I managed to recruit a full team of 7 programmers, 9 artists, and 4 designers</p>
+    <p>Through early team discussions and feedback, the scope was refined into a more focused two-timeline system, which became the foundation of the final game.</p>
+    <p>This process gave me experience not just in designing a game, but in:</p>
+    <ul>
+      <li>Communicating a clear and compelling vision</li>
+      <li>Adapting ideas based on team feedback</li>
+      <li>Building and aligning a large, multidisciplinary team from scratch</li>
+    </ul>
+
+    <h3>Core System & Mechanics</h3>
+    <h4>Object Interaction System</h4>
+    <p>I designed and implemented the object pick-up, placement, and rotation system, which became a core part of player interaction.</p>
+    <p>Key contributions:</p>
+    <ul>
+      <li>Designed and implemented the object pickup and placement mechanic based on the player's line of sight</li>
+      <li>Added object rotation for more precise placements and player pleasure</li>
+      <li>Prevented soft-lock scenarios by disallowing placement near mirrors</li>
+      <li>Forced objects to drop when transitioning between timelines</li>
+      <li>Improved accessibility by updating visual language due to play-testing feedback (colorblind-friendly adjustments)</li>
+    </ul>
+    <p>This system required careful consideration of player freedom vs. game constraints, especially due to the complexity introduced by time travel mechanics.
+       We've found that players really enjoyed this particular mechanic and would spend time fiddling with placing objects in random places while thinking about puzzle solutions.
+       Restricting or removing this feature often resulted in player dissatisfaction. So I did my best to allow players as much freedom as possible.</p>
+    <!-- ADD PHOTOS!! -->
+
+    <h4>Object Pushing System</h4>
+    <p>I implemented and expanded the pushing mechanic into a designer-friendly and predictable system.</p>
+    <p>Key contributions:</p>
+    <ul>
+      <li>Implemented directional push limits</li>
+      <li>Added a "rebound" animation to indicate to the player when that limit has been reached</li>
+      <li>Ensured mirrored pushable objects behaved consistently across timelines and properly shared their limits</li>
+      <li>Created preview tools so designers could visualize movement constraints</li>
+      <li>Added functionality to adjust push strength per direction per object</li>
+      <li>Added visual indicators (arrows) to communicate valid push directions to players</li>
+    </ul>
+    <p>This system bridged technical implementation and UX clarity, ensuring puzzles felt fair and readable. Although the biggest struggle with any puzzle that involved pushing objects 
+      was ensuring that the object's intended path was free of cosmetic obstructions. I conducted several playtests each time a level's layout was changed to ensure a smooth gameplay experience.</p>
+    <!-- ADD PHOTOS!! -->
+
+    <h4>Mirror System & Collision Handling</h4>
+    <p>One of the most complex systems I worked on was refining how mirror behaviour.</p>
+    <p>Key contributions:</p>
+    <ul>
+      <li>Prevented teleportation into invalid or obstructed spaces caused by linked mirrors being moved</li
+      <li>Allowed asymmetric collision behavior so that mirrors in a different timeline would pass through moved furniture</li>
+      <li>Edited and expanded the mirror's collision system to support multiple different behaviors depending on different collision channels</li>
+      <li>Created preview tools so designers could visualize movement constraints</li>
+      <li>Ensured consistency between mirrored counterparts</li>
+    </ul>
+    <p>The mirrors were the most complex mechanic in the game. It was central to the game's core design and had to interact with several different mechanics at once.
+      Multiple programmers had a hand in its functionality, so maintaining clear communication and proper code organization was key. 
+      This required deep debugging and iteration, especially when integrating with other mechanics like pushing and object placement.</p>
+    <!-- ADD PHOTOS!! -->
+
+    <h3>Puzzle Design & Implementation</h3>
+    <h4>Kitchen Fire Puzzle (Design + Implementation)</h4>
+    <p>This was a puzzle concept I designed, pitched, and implemented into the game. It consists of a lit stove burner in the past, resulting in a burned-down kitchen in the future.
+      In the future kitchen lie notes containing key information for solving a different puzzle, but they are too charred to read due to the fire.
+      The player must identify this and turn off the stove in the past by solving a toggle-switch puzzle, where each stove dial can toggle up to 3 burners at once.</p>
+    <p>Key contributions:</p>
+    <ul>
+      <li>Created a non-linear stove system where knobs affect multiple burners</li>
+      <li>Designed the logic so players must deduce the correct configuration</li>
+      <li>Built a manager system that updates the future timeline based on player actions in the past</li>
+      <li>Dynamically swapped textures and notes to reflect timeline changes</li>
+    </ul>
+    <p>This was my favorite puzzle to implement. I had to collaborate with the Designer and Art team to ensure it met our game's style and expectations. I had our special effects 
+      artist create a burner flame to use and worked with him to add enough functionality to interact with the stove prop. I had the designers approve my toggle-switch idea and 
+      fully implemented every moving piece and animation relating to this puzzle.</p>
+    <p>This puzzle emphasizes my ability to combine systemic design, player-driven discovery, and cause-and-effect across timelines.</p>
+    <!-- ADD PHOTOS!! -->
+
+    <h4>Dining Room Puzzle System</h4>
+    <p>This puzzle directly follows the Kitchen Fire Puzzle. After finding the now-legible notes in the kitchen detailing each dining guest's food order, the player must search 
+       the rest of the room for clues on where each dinner guest sat. Once all the information is uncovered, the player must then correctly place each meal in front of the correct
+       seat in the past in order to trigger the next phase of the game.</p>
+    <p>Key contributions:</p>
+    <ul>
+      <li>Implemented a state-based manager system that triggers progression to the final stage if and only if the meals are correctly placed</li>
+      <li>Implemented working drawers and interactable props for clue discovery</li>
+      <li>Added and implemented diagram clues of the guest's assigned seat throughout the level</li>
+      <li>Assisted in final puzzle setup and mirror navigation constraints</li>
+    </ul>
+    <p>This system emphasized modularity and scalability, allowing designers to easily tweak puzzle conditions.</p>
+    <!-- ADD PHOTOS!! -->
+
+    <h3>Designer, Debbuging, & Development Tools</h3>
+    <p>Key contributions:</p>
+    <ul>
+      <li>Developed a telemetry system to support design iteration that tracked what objects players interacted with the most per level to better evaluate player behavior</li>
+      <li>Implemented A debug/free-fly mode for rapid level navigation and playtesting</li>
+      <li>Visualization tools for mechanic tuning</li>
+    </ul>
+    <p>The main goal for each of these tools was to reduce iteration time during development and playtesting. The telemetry in particular required me to work directly with Unreal Engine's C++ code in order to properly implement it.</p>
+
+    <h3>Challenges & Growth</h3>
+    <p>This was the biggest, most diverse team I've ever had the pleasure to work with. Although this meant that the project had more talented people working to make it perfect, 
+      it also meant that there were many more opportunities for disagreements and user errors to surface. I have learned a lot about collaboration and team management through this experience.</p>
+    <p>However, some of my more technical challenges were:</p>
+    <ul>
+      <li>Integrating C++ with Unreal Blueprints</li>
+      <li>Designing systems that remain stable in a collaborative environment</li>
+      <li>Debugging complex interactions between multiple systems</li>
+      <li>Learning to prioritize technical clarity and usability</li>
+    </ul>
+
+    <h3>Key Takeaways</h3>
+    <p>Through this project I gained:</p>
+    <ul>
+      <li>A strong ability to bridge design and engineering</li>
+      <li>Experience building scalable gameplay systems</li>
+      <li>Comfort in working in large, multidisciplinary teams</li>
+      <li>A heightened focus on player experience, accessibility, and usability</li>
+    </ul>
+    <p>That being said, I only had a year to learn and adapt to these challenges. If I had more time with this game and my team, IDK WHAT TO PUT HERE HELP!!</p>
+
   </main>
 
   <footer>

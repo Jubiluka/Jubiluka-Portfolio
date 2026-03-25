@@ -400,7 +400,8 @@ ul
 }
 
 .projects-main {
-  padding: 2rem;
+  margin-left: 300px;
+  padding: 0 0 0 2rem;
   transition: margin-left 0.25s ease;
 }
 
@@ -409,7 +410,6 @@ ul
 }
 
 .projects-content {
-  margin: 2rem;
   text-align: left;
 }
 

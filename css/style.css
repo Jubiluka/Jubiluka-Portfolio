@@ -310,7 +310,7 @@ section + section {
 
 
 /*IN PAGE BUTTON*/
-button {
+.button {
   background: #6200ea;
   color: white;
   border: none;
@@ -319,9 +319,10 @@ button {
   border-radius: 0px; /* 0 = square */
   cursor: pointer;
   transition: background 0.2s;
+  text-decoration: none;
 }
 
-button:hover {
+.button:hover {
   background: #3700b3;
 }
 

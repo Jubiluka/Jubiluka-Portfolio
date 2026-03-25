@@ -293,6 +293,11 @@ ul
 }
 
 /*RESUME PAGE*/
+section + section {
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+
 .subtle {
   color: #777;
   font-size: 0.9rem;

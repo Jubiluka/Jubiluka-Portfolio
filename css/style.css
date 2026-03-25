@@ -443,6 +443,10 @@ h1, h2, h3, h4 {
   scroll-margin-top: 1rem;
 }
 
+body.nav-open {
+  overflow: hidden;
+}
+
 @media (min-width: 1201px) {
   .toc-sidebar.closed + .toc-toggle + .projects-main,
   .projects-page .hero.full,

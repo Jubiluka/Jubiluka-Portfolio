@@ -172,12 +172,16 @@ function openSidebar() {
   tocSidebar.classList.remove("closed");
   tocSidebar.classList.add("open");
   projectsMain.classList.remove("full");
+
+  tocToggle.classList.add("hidden"); 
 }
 
 function closeSidebar() {
   tocSidebar.classList.add("closed");
   tocSidebar.classList.remove("open");
   projectsMain.classList.add("full");
+
+  tocToggle.classList.remove("hidden");
 }
 
 function isMobile() {

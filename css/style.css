@@ -394,13 +394,23 @@ ul
   font-size: 1.2rem;
 }
 
+.toc-toggle.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
 .projects-main {
-  margin-left: 300px;
+  padding: 2rem;
   transition: margin-left 0.25s ease;
 }
 
 .projects-main.full {
   margin-left: 0;
+}
+
+.projects-content {
+  margin: 2rem;
+  text-align: left;
 }
 
 html {
@@ -426,10 +436,6 @@ h1, h2, h3, h4 {
 
   .toc-sidebar.open {
     transform: translateX(0);
-  }
-
-  .projects-main {
-    margin-left: 0;
   }
 
   .toc-close {

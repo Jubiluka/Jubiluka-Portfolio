@@ -162,68 +162,80 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 //NAV BAR
-const tocSidebar = document.getElementById("tocSidebar");
-const tocToggle = document.getElementById("tocToggle");
-const tocClose = document.getElementById("tocClose");
-const projectsMain = document.querySelector(".projects-main");
-const tocLinks = document.querySelectorAll(".toc-nav a, .toc-back-to-top");
+const isProjectsPage = document.body.classList.contains("projects-page");
 
-function openSidebar() {
-  tocSidebar.classList.remove("closed");
-  tocSidebar.classList.add("open");
-  projectsMain.classList.remove("full");
-
-  tocToggle.classList.add("hidden"); 
-}
-
-function closeSidebar() {
-  tocSidebar.classList.add("closed");
-  tocSidebar.classList.remove("open");
-  projectsMain.classList.add("full");
-
-  tocToggle.classList.remove("hidden");
-}
-
-function isMobile() {
-  return window.innerWidth <= 900;
-}
-
-tocToggle.addEventListener("click", () => {
-  if (tocSidebar.classList.contains("closed") || !tocSidebar.classList.contains("open")) {
-    openSidebar();
-  } else {
-    closeSidebar();
+if (isProjectsPage) {
+  const tocSidebar = document.getElementById("tocSidebar");
+  const tocToggle = document.getElementById("tocToggle");
+  const tocClose = document.getElementById("tocClose");
+  const hero = document.querySelector(".hero");
+  const footer = document.querySelector("footer");
+  const projectsMain = document.querySelector(".projects-main");
+  const tocLinks = document.querySelectorAll(".toc-nav a, .toc-back-to-top");
+  
+  function openSidebar() {
+    tocSidebar.classList.remove("closed");
+    tocSidebar.classList.add("open");
+  
+    tocToggle.classList.add("hidden");
+  
+    hero.classList.remove("full");
+    footer.classList.remove("full");
+    projectsMain.classList.remove("full");
   }
-});
-
-tocClose.addEventListener("click", () => {
-  closeSidebar();
-});
-
-tocLinks.forEach(link => {
-  link.addEventListener("click", () => {
-    if (isMobile()) {
+  
+  function closeSidebar() {
+    tocSidebar.classList.remove("closed");
+    tocSidebar.classList.add("open");
+  
+    tocToggle.classList.add("hidden");
+  
+    hero.classList.remove("full");
+    footer.classList.remove("full");
+    projectsMain.classList.remove("full");
+  }
+  
+  function isMobile() {
+    return window.innerWidth <= 1200;
+  }
+  
+  tocToggle.addEventListener("click", () => {
+    if (tocSidebar.classList.contains("closed") || !tocSidebar.classList.contains("open")) {
+      openSidebar();
+    } else {
       closeSidebar();
     }
   });
-});
-
-window.addEventListener("resize", () => {
-  if (isMobile()) {
-    projectsMain.classList.remove("full");
-    tocSidebar.classList.add("closed");
-    tocSidebar.classList.remove("open");
-  } else {
-    if (tocSidebar.classList.contains("closed")) {
-      projectsMain.classList.add("full");
-    } else {
+  
+  tocClose.addEventListener("click", () => {
+    closeSidebar();
+  });
+  
+  tocLinks.forEach(link => {
+    link.addEventListener("click", () => {
+      if (isMobile()) {
+        closeSidebar();
+      }
+    });
+  });
+  
+  window.addEventListener("resize", () => {
+    if (isMobile()) {
       projectsMain.classList.remove("full");
+      tocSidebar.classList.add("closed");
+      tocSidebar.classList.remove("open");
+    } else {
+      if (tocSidebar.classList.contains("closed")) {
+        projectsMain.classList.add("full");
+      } else {
+        projectsMain.classList.remove("full");
+      }
     }
+  });
+  
+  if (isMobile()) {
+    closeSidebar();
+  } else {
+    openSidebar();
   }
-});
-
-if (isMobile()) {
-  closeSidebar();
-} else {
-  openSidebar();
 }

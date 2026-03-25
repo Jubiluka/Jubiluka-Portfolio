@@ -1,7 +1,7 @@
 :root {
   --primary: #45071a; /*Header Color*/
-  --secondary: #ffc144; /*HEader Highlight*/
-  --accent: #fabf1e; /*Header text*/
+  --secondary: #801133; /*HEader Highlight*/
+  --accent: #ffc144; /*Header text*/
   --bg: #fffdf3;  /*Actual BG*/
   --text: #0f0b0b; /*Actual text*/
   --subtle: #666;
@@ -498,7 +498,7 @@ body.nav-open {
 
 .contact-card {
   padding: 1rem 1.5rem;
-  background: var(--primary);
+  background: color-mix(in srgb, var(--primary), #ff015f 20%);
   color: var(--accent);
   text-decoration: none;
   border-radius: 6px;
@@ -508,7 +508,7 @@ body.nav-open {
 }
 
 .contact-card:hover {
-  background: var(--secondary);
+  background: color-mix(in srgb, var(--secondary), #ff015f 20%);
   transform: translateY(-2px);
 }
 
@@ -530,7 +530,7 @@ section + section {
 
 /*IN PAGE BUTTON*/
 .button {
-  background: var(--primary);
+  background: color-mix(in srgb, var(--primary), #ff015f 20%);
   color: var(--accent);
   border: none;
   padding: 0.7rem 1.5rem;
@@ -544,7 +544,7 @@ section + section {
 }
 
 .button:hover {
-  background: var(--secondary);
+  background: color-mix(in srgb, var(--secondary), #ff015f 20%);
 }
 
 footer {

@@ -399,14 +399,30 @@ ul
   pointer-events: none;
 }
 
+:root {
+  --toc-width: 300px;
+}
+
+.projects-page .hero,
+.projects-page footer,
 .projects-main {
-  margin-left: 300px;
-  padding: 0 0 0 2rem;
   transition: margin-left 0.25s ease;
 }
 
+.projects-page .hero,
+.projects-page footer {
+  margin-left: var(--toc-width);
+}
+
+.projects-page .hero.full,
+.projects-page footer.full,
 .projects-main.full {
   margin-left: 0;
+}
+
+.projects-main {
+  margin-left: 300px;
+  padding: 0 0 0 2rem;
 }
 
 .projects-content {
@@ -423,6 +439,8 @@ h1, h2, h3, h4 {
 
 @media (min-width: 1201px) {
   .toc-sidebar.closed + .toc-toggle + .projects-main,
+  .projects-page .hero.full,
+  .projects-page footer.full,
   .projects-main.full {
     margin-left: 0;
   }

@@ -12,7 +12,7 @@ body {
   justify-content: center;
   align-items: center;  
 
-  background: #121212; /* or any color you like */
+  background: #420115; /* or any color you like */
   color: white;
   text-align: center;
 }
@@ -25,7 +25,7 @@ body {
   margin-bottom: 0.5rem;
   margin-top: 0.5rem;
 
-  border: 4px solid white; /* optional but looks nice */
+  border: 4px solid #fabf1e; /* optional but looks nice */
 }
 
 /* Content stays above overlay */
@@ -84,7 +84,7 @@ body {
 .btn {
   flex: 1;                 /* 🔥 each button takes equal space */
   /*background: #6200ea;*/
-  color: white;
+  color: #fabf1e;
   padding: 0.8rem 1.6rem; /* top/bottom, left/right */
   text-decoration: none;
   border-radius: 0px; /* 0 = square */
@@ -94,11 +94,11 @@ body {
 
 /* Add divider between buttons */
 .btn:not(:first-child) {
-  border-left: 2px solid white;
+  border-left: 2px solid #fabf1e;
 }
 
 .btn:hover {
-  background: #3700b3;
+  background: #610136;
 }
 
 main {
@@ -282,8 +282,8 @@ ul
   left: 0;
   width: 300px;
   height: 100dvh;
-  background: #111;
-  color: white;
+  background: #420115;
+  color: #fabf1e;
   transform: translateX(0);
   transition: transform 0.25s ease;
   z-index: 1000;
@@ -520,8 +520,8 @@ section + section {
 
 /*IN PAGE BUTTON*/
 .button {
-  background: #6200ea;
-  color: white;
+  background: #420115;
+  color: #fabf1e;
   border: none;
   padding: 0.7rem 1.5rem;
   font-size: 1rem;
@@ -533,7 +533,7 @@ section + section {
 }
 
 .button:hover {
-  background: #3700b3;
+  background: #610136;
 }
 
 footer {

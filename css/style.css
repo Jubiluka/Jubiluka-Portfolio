@@ -267,6 +267,32 @@ ul
   }
 }
 
+/*CONTACT CARDS*/
+.contact-links {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.contact-card {
+  padding: 1rem 1.5rem;
+  background: #6200ea;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+.contact-card:hover {
+  background: #3700b3;
+  transform: translateY(-2px);
+}
+
+
 /*IN PAGE BUTTON*/
 button {
   background: #6200ea;

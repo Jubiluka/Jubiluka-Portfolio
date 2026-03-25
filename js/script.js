@@ -182,6 +182,10 @@ if (isProjectsPage) {
     hero.classList.remove("full");
     footer.classList.remove("full");
     projectsMain.classList.remove("full");
+
+     if (isMobile()) {
+      document.body.classList.add("nav-open");
+    }
   }
   
   function closeSidebar() {
@@ -193,6 +197,8 @@ if (isProjectsPage) {
     hero.classList.add("full");
     footer.classList.add("full");
     projectsMain.classList.add("full");
+
+    document.body.classList.remove("nav-open");
   }
   
   function isMobile() {

@@ -292,6 +292,17 @@ ul
   transform: translateY(-2px);
 }
 
+/*RESUME PAGE*/
+.subtle {
+  color: #777;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.project-entry {
+  margin-bottom: 1.5rem;
+}
+
 
 /*IN PAGE BUTTON*/
 button {

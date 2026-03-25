@@ -1,6 +1,15 @@
+:root {
+  --primary: #420115; /*Header Color*/
+  --secondary: #610136; /*HEader Highlight*/
+  --accent: #fabf1e; /*Header text*/
+  --bg: #fcf8e6;  /*Actual BG*/
+  --text: #0f0b0b; /*Actual text*/
+  --subtle: #666;
+}
+
 body {
   font-family: Arial, sans-serif;
-  background-color: #fafafa;
+  background-color: var(--bg);
   text-align: center;
   margin: 0;
   padding: 0;
@@ -12,8 +21,8 @@ body {
   justify-content: center;
   align-items: center;  
 
-  background: #420115; /* or any color you like */
-  color: white;
+  background: var(--primary); /* or any color you like */
+  color: var(--bg);
   text-align: center;
 }
 
@@ -25,7 +34,7 @@ body {
   margin-bottom: 0.5rem;
   margin-top: 0.5rem;
 
-  border: 4px solid #fabf1e; /* optional but looks nice */
+  border: 4px solid var(--accent); /* optional but looks nice */
 }
 
 /* Content stays above overlay */
@@ -84,7 +93,7 @@ body {
 .btn {
   flex: 1;                 /* 🔥 each button takes equal space */
   /*background: #6200ea;*/
-  color: #fabf1e;
+  color: var(--accent);
   padding: 0.8rem 1.6rem; /* top/bottom, left/right */
   text-decoration: none;
   border-radius: 0px; /* 0 = square */
@@ -94,11 +103,11 @@ body {
 
 /* Add divider between buttons */
 .btn:not(:first-child) {
-  border-left: 2px solid #fabf1e;
+  border-left: 2px solid var(--accent);
 }
 
 .btn:hover {
-  background: #610136;
+  background: var(--secondary);
 }
 
 main {
@@ -282,8 +291,8 @@ ul
   left: 0;
   width: 300px;
   height: 100dvh;
-  background: #420115;
-  color: #fabf1e;
+  background: var(--primary);
+  color: var(--accent);
   transform: translateX(0);
   transition: transform 0.25s ease;
   z-index: 1000;
@@ -324,7 +333,7 @@ ul
   right: 0;
   top: 0;
   background: transparent;
-  color: white;
+  color: var(--accent);
   border: none;
   font-size: 1.4rem;
   cursor: pointer;
@@ -341,7 +350,7 @@ ul
 }
 
 .toc-nav a {
-  color: white;
+  color: var(--bg);
   text-decoration: none;
   text-align: left;
   line-height: 1.25;
@@ -354,6 +363,7 @@ ul
 .toc-level-1 {
   font-weight: 700;
   padding-left: 0;
+  padding-top: 1rem;
 }
 
 .toc-level-2 {
@@ -375,7 +385,7 @@ ul
   display: block;
   margin-top: 1rem;
   text-align: center;
-  color: white;
+  color: var(--bg);
   text-decoration: none;
   padding-top: 0.75rem;
   border-top: 1px solid rgba(255,255,255,0.2);
@@ -392,8 +402,8 @@ ul
   left: 1rem;
   z-index: 1001;
 
-  background: #111;
-  color: white;
+  background: var(--primary);
+  color: var(--accent);
   border: none;
   padding: 0.7rem 0.9rem;
   cursor: pointer;
@@ -488,8 +498,8 @@ body.nav-open {
 
 .contact-card {
   padding: 1rem 1.5rem;
-  background: #6200ea;
-  color: white;
+  background: var(--primary);
+  color: var(--accent);
   text-decoration: none;
   border-radius: 6px;
 
@@ -498,7 +508,7 @@ body.nav-open {
 }
 
 .contact-card:hover {
-  background: #3700b3;
+  background: var(--secondary);
   transform: translateY(-2px);
 }
 
@@ -509,7 +519,7 @@ section + section {
 }
 
 .subtle {
-  color: #777;
+  color: var(--subtle);
   font-size: 0.9rem;
   margin-bottom: 0.5rem;
 }
@@ -520,23 +530,24 @@ section + section {
 
 /*IN PAGE BUTTON*/
 .button {
-  background: #420115;
-  color: #fabf1e;
+  background: var(--primary);
+  color: var(--accent);
   border: none;
   padding: 0.7rem 1.5rem;
   font-size: 1rem;
-  border-radius: 0px; /* 0 = square */
+  border-radius: 5px; 
   cursor: pointer;
   transition: background 0.2s;
   text-decoration: none;
-  margin-top: 2rem;
+  margin-top: 0.5rem;
+  display: inline-block;
 }
 
 .button:hover {
-  background: #610136;
+  background: var(--secondary);
 }
 
 footer {
   margin-top: 3rem;
-  color: #666;
+  color: var(--subtle);
 }

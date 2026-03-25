@@ -320,6 +320,7 @@ section + section {
   cursor: pointer;
   transition: background 0.2s;
   text-decoration: none;
+  margin-top: 2rem;
 }
 
 .button:hover {

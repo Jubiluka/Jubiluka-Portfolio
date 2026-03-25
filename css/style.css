@@ -292,6 +292,9 @@ ul
   flex-direction: column;
   box-sizing: border-box;
   padding: 1rem 1rem 1.5rem 1rem;
+
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .toc-sidebar.closed {

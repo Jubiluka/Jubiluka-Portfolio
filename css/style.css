@@ -295,6 +295,8 @@ ul
 
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
+
+  padding-bottom: calc(1rem + env(safe-area-inset-bottom));
 }
 
 .toc-sidebar.closed {

@@ -167,11 +167,11 @@ if (isProjectsPage) {
   const tocToggle = document.getElementById("tocToggle");
   const tocClose = document.getElementById("tocClose");
   const hero = document.querySelector(".hero");
-  const footer = document.querySelector("footer");
   const projectsMain = document.querySelector(".projects-main");
   const tocLinks = document.querySelectorAll(".toc-nav a, .toc-back-to-top");
   
   function openSidebar() {
+    const footer = document.querySelector("footer");
     tocSidebar.classList.remove("closed");
     tocSidebar.classList.add("open");
   
@@ -187,6 +187,7 @@ if (isProjectsPage) {
   }
   
   function closeSidebar() {
+    const footer = document.querySelector("footer");
     tocSidebar.classList.add("closed");
     tocSidebar.classList.remove("open");
 

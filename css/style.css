@@ -272,6 +272,10 @@ ul
   position: relative;
 }
 
+.projects-main {
+  padding: 2rem 2rem 2rem 2rem;
+}
+
 .toc-sidebar {
   position: fixed;
   top: 0;

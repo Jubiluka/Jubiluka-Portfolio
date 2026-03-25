@@ -24,20 +24,63 @@
     </div>
   </section>
 
+  <div class="page-layout">
+  <aside class="toc">
+    <details open>
+      <summary>On This Page</summary>
+      <nav>
+        <a href="#omen">An Omen in the Mirror</a>
+    
+        <a href="#omen-overview" class="sub-link">Overview</a>
+        <a href="#omen-my-role" class="sub-link">My Role</a>
+        <a href="#omen-game-ideation" class="sub-link">Game Ideation and Pitch</a>
+    
+        <a href="#omen-core-systems" class="sub-link">Core System & Mechanics</a>
+        <a href="#omen-object-interaction" class="sub-sub-link">Object Interaction System</a>
+        <a href="#omen-object-pushing" class="sub-sub-link">Object Pushing System</a>
+        <a href="#omen-mirror-system" class="sub-sub-link">Mirror System & Collision Handling</a>
+    
+        <a href="#omen-puzzle-design" class="sub-link">Puzzle Design & Implementation</a>
+        <a href="#omen-kitchen-fire" class="sub-sub-link">Kitchen Fire Puzzle</a>
+        <a href="#omen-dining-room" class="sub-sub-link">Dining Room Puzzle System</a>
+    
+        <a href="#omen-tools" class="sub-link">Designer, Debugging, & Development Tools</a>
+        <a href="#omen-challenges" class="sub-link">Challenges & Growth</a>
+        <a href="#omen-takeaways" class="sub-link">Key Takeaways</a>
+
+        
+        <a href="#elem">Elementokens!</a>
+    
+        <a href="#elem-overview" class="sub-link">Overview</a>
+        <a href="#elem-my-role" class="sub-link">My Role</a>
+    
+        <a href="#elem-core-systems" class="sub-link">Core Systems & Contributions</a>
+        <a href="#elem-animation-system" class="sub-sub-link">Animation System</a>
+        <a href="#elem-ui-text" class="sub-sub-link">UI & Text Rendering</a>
+        <a href="#elem-context-menu" class="sub-sub-link">Context-Sensitive Action Menu</a>
+        <a href="#elem-wizard" class="sub-sub-link">Wizard Gameplay Integration</a>
+        <a href="#elem-pathfinding" class="sub-sub-link">Pathfinding</a>
+    
+        <a href="#elem-debug" class="sub-link">Debugging & Build Systems</a>
+        <a href="#elem-takeaways" class="sub-link">Key Takeaways</a>
+      </nav>
+    </details>
+  </aside>
+  
   <main>
     <section class="centered">
     <h1><strong>Projects</strong></h1>
     
-    <h2>An Omen in the Mirror</h2>
+    <h2 id="omen">An Omen in the Mirror</h2>
     <h4>Gameplay Programmer | Unreal Engine 5 | C++ | Blueprints | Perforce</h4>
     </section>
 
-    <h3>Overview</h3>
+    <h3 id="omen-overview">Overview</h3>
     <p><em>An Omen in the Mirror</em> is a 3D narrative puzzle game developed in Unreal Engine 5, where players explore a mysterious mansion and travel between timelines using magical mirrors.</p>
     <p>Originally conceived as a three-timeline system, the project evolved through team collaboration into a more focused two-timeline experience. 
       Players take on the role of a reporter investigating Wraith Manor, uncovering its past by physically traversing mirrors and manipulating the environment across time.</p>
 
-    <h3>My Role</h3>
+    <h3 id="omen-my-role">My Role</h3>
     <p>I worked primarily as a Gameplay Programmer, while also contributing to design decisions, system architecture, and team coordination.</p>
     <ul>
       <li>Implementing core interaction systems</li>
@@ -47,7 +90,7 @@
       <li>Collaborating closely with designers and artists to ensure systems were intuitive and robust</li>
     </ul>
 
-    <h3>Game Ideation and Pitch</h3>
+    <h3 id="omen-game-ideation">Game Ideation and Pitch</h3>
     <p>This project began with a concept I developed in order to recruit a team.</p>
     <p>My initial idea centered around a mansion that existed across three timelines — the past, present, and distant future — where players would solve puzzles by interacting with 
       each version of the environment. These timelines could be interacted with through mirrors and mirror shards, allowing the player to manipulate time to progress.</p>
@@ -75,8 +118,8 @@
       </div>
     </div>
 
-    <h3>Core System & Mechanics</h3>
-    <h4>Object Interaction System</h4>
+    <h3 id="omen-core-systems">Core System & Mechanics</h3>
+    <h4 id="omen-object-interaction">Object Interaction System</h4>
     <p>I designed and implemented the <strong>object pick-up, placement, and rotation system,</strong> which became a core part of player interaction.</p>
     <p>Key contributions:</p>
     <ul>
@@ -100,7 +143,7 @@
       </div>
     </div>
 
-    <h4>Object Pushing System</h4>
+    <h4 id="omen-object-pushing">Object Pushing System</h4>
     <p>I implemented and expanded the pushing mechanic into a designer-friendly and predictable system.</p>
     <p>Key contributions:</p>
     <ul>
@@ -123,7 +166,7 @@
       </div>
     </div>
 
-    <h4>Mirror System & Collision Handling</h4>
+    <h4 id="omen-mirror-system">Mirror System & Collision Handling</h4>
     <p>One of the most complex systems I worked on was refining mirror behaviour.</p>
     <p>Key contributions:</p>
     <ul>
@@ -138,8 +181,8 @@
       This required deep debugging and iteration, especially when integrating with other mechanics like pushing and object placement.</p>
     <!-- ADD GIFS???/VIDEOS???!! -->
 
-    <h3>Puzzle Design & Implementation</h3>
-    <h4>Kitchen Fire Puzzle (Design + Implementation)</h4>
+    <h3 id="omen-puzzle-design">Puzzle Design & Implementation</h3>
+    <h4 id="omen-kitchen-fire">Kitchen Fire Puzzle (Design + Implementation)</h4>
     <p>This was a puzzle concept I designed, pitched, and implemented into the game. It consists of a lit stove burner in the past, resulting in a burned-down kitchen in the future.
       In the future kitchen lie notes containing key information for solving a different puzzle, but they are too charred to read due to the fire.
       The player must identify this and turn off the stove in the past by solving a toggle-switch puzzle, where each stove dial can toggle up to 3 burners at once.</p>
@@ -166,7 +209,7 @@
       </div>
     </div>
 
-    <h4>Dining Room Puzzle System</h4>
+    <h4 id="omen-dining-room">Dining Room Puzzle System</h4>
     <p>This puzzle directly follows the <em>Kitchen Fire Puzzle</em>. After finding the now-legible notes in the kitchen detailing each dining guest's food order, the player must search 
        the rest of the room for clues on where each dinner guest sat. Once all the information is uncovered, the player must then correctly place each meal in front of the correct
        seat in the past in order to trigger the next phase of the game.</p>
@@ -190,7 +233,7 @@
       </div>
     </div>
 
-    <h3>Designer, Debugging, & Development Tools</h3>
+    <h3 id="omen-tools">Designer, Debugging, & Development Tools</h3>
     <p>Key contributions:</p>
     <ul>
       <li>Developed a telemetry system to support design iteration that tracked what objects players interacted with the most per level to better evaluate player behavior</li>
@@ -207,7 +250,7 @@
       </div>
     </div>
 
-    <h3>Challenges & Growth</h3>
+    <h3 id="omen-challenges">Challenges & Growth</h3>
     <p>This was the biggest, most diverse team I've ever had the pleasure to work with. Although this meant that the project had more talented people working to make it perfect, 
       it also meant that there were many more opportunities for disagreements and user errors to surface. I have learned a lot about collaboration and team management through this experience.</p>
     <p>However, some of my more technical challenges were:</p>
@@ -218,7 +261,7 @@
       <li>Learning to prioritize technical clarity and usability</li>
     </ul>
 
-    <h3>Key Takeaways</h3>
+    <h3 id="omen-takeaways">Key Takeaways</h3>
     <p>Through this project I gained:</p>
     <ul>
       <li>A strong ability to bridge design and engineering</li>
@@ -236,7 +279,7 @@
     <!-- ELEMENTOKENS -->
 
     <section class="centered">    
-    <h2>Elementokens!</h2>
+    <h2 id="elem">Elementokens!</h2>
     <h4>Systems and Gameplay Programmer | Technical Lead | Custom Engine | C++ </h4>
 
     <h3><a href="https://games.digipen.edu/games/elementokens" target="_blank">
@@ -244,7 +287,7 @@
     </a></h3>
     </section>
 
-    <h3>Overview</h3>
+    <h3 id="elem-overview">Overview</h3>
 
     <p>
     Elementokens is a 2-player turn-based strategy game where players control wizards on a grid, making decisions about movement, positioning, and abilities each turn. 
@@ -262,8 +305,21 @@
       without requiring constant rewrites.
     </p>
 
-    <h3>Core Systems & Contributions</h3>
-    <h4>Animation System</h4>
+    <h3 id="elem-my-role">My Role</h3>
+    <p>
+    I worked as a Gameplay and Systems Programmer on a small team, while also taking on the roles of Technical Lead, Co-Producer, and Build Master.
+      Because of the team’s size, I was heavily involved in both the technical development of the game and the overall direction of the project.
+    </p>
+    
+    <ul>
+      <li>Designed and implemented core gameplay and engine systems (animation, UI, text, pathfinding)</li>
+      <li>Integrated systems into player-facing gameplay through movement, interaction, and feedback</li>
+      <li>Led technical direction and supported team organization as Technical Lead and Co-Producer</li>
+      <li>Managed builds and handled final integration as Build Master</li>
+    </ul>
+
+    <h3 id="elem-core-systems">Core Systems & Contributions</h3>
+    <h4 id="elem-animation-system">Animation System</h4>
     <p>
     One of the first systems I worked on was the game's animation pipeline. I implemented the core animation system from scratch, ensuring that character sprites and state
       transitions could be displayed correctly. As the project evolved, I refactored this system into its own dedicated component, 
@@ -290,7 +346,7 @@
       </div>
     </div>
     
-    <h4>UI & Text Rendering</h4>
+    <h4 id="elem-ui-text">UI & Text Rendering</h4>
     <p>
     I was responsible for building much of the game's UI systems, including a custom sprite-sheet-based text rendering system.
       Initially, I explored implementing TrueType fonts, but due to technical limitations and instability, I pivoted to a sprite-sheet solution to ensure reliability within our engine.
@@ -317,7 +373,7 @@
       </div>
     </div>
 
-    <h4>Context-Sensitive Action Menu</h4>
+    <h4 id="elem-context-menu">Context-Sensitive Action Menu</h4>
 
     <p>
     I implemented a dynamic context bar that displays only the actions currently available to the player, such as movement, casting, or interacting with objects. 
@@ -351,7 +407,7 @@
       </div>
     </div>
 
-    <h4>Wizard Gameplay Integration</h4>
+    <h4 id="elem-wizard">Wizard Gameplay Integration</h4>
 
     <p>
     I worked on the wizard gameplay object, which served as one of the main points where the engine’s core systems came together. 
@@ -383,7 +439,7 @@
       </div>
     </div>
     
-    <h4>Pathfinding</h4>
+    <h4 id="elem-pathfinding">Pathfinding</h4>
     <p>
     One of the more technically involved systems I implemented was the game's tile-based pathfinding. Because movement occurred on a grid and each tile had the same traversal cost, 
       I used a breadth-first search approach to expand outward from the starting tile and evaluate valid neighboring positions layer by layer.
@@ -407,7 +463,7 @@
       </div>
     </div>
     
-    <h3>Debugging & Build Systems</h3>
+    <h3 id="elem-debug">Debugging & Build Systems</h3>
     <p>
     In addition to feature work, I took ownership of debugging and finalizing the game for submission. 
       This included testing builds on clean machines, resolving last-minute issues, and ensuring the game met project requirements.
@@ -417,7 +473,7 @@
     As a Build Master, I also helped coordinate final integration efforts across the team, ensuring that all systems worked together cohesively.
     </p>
 
-    <h3>Key Takeaways</h3>
+    <h3 id="elem-takeaways">Key Takeaways</h3>
     
     <p>Through this project I gained:</p>
     
@@ -443,6 +499,7 @@
     </p>
 
   </main>
+  </div>
 
   <footer>
     <p>Made with 💖 by Katie</p>

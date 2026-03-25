@@ -6,6 +6,7 @@
   <title>Julia Moraes Projects</title>
   <link rel="stylesheet" href="../css/style.css" />
 </head>
+<div id="top"></div>
 <body>
   
   <section class="hero">
@@ -25,47 +26,55 @@
   </section>
 
   <div class="page-layout">
-  <aside class="toc">
-    <details open>
-      <summary>On This Page</summary>
-      <nav>
-        <a href="#omen">An Omen in the Mirror</a>
+  <aside class="toc-sidebar" id="tocSidebar">
+      <div class="toc-header">
+        <h2>On This Page</h2>
+        <button class="toc-close" id="tocClose" aria-label="Close navigation">✕</button>
+      </div>
     
-        <a href="#omen-overview" class="sub-link">Overview</a>
-        <a href="#omen-my-role" class="sub-link">My Role</a>
-        <a href="#omen-game-ideation" class="sub-link">Game Ideation and Pitch</a>
+      <nav class="toc-nav">
+        <a href="#omen" class="toc-level-1">An Omen in the Mirror</a>
     
-        <a href="#omen-core-systems" class="sub-link">Core System & Mechanics</a>
-        <a href="#omen-object-interaction" class="sub-sub-link">Object Interaction System</a>
-        <a href="#omen-object-pushing" class="sub-sub-link">Object Pushing System</a>
-        <a href="#omen-mirror-system" class="sub-sub-link">Mirror System & Collision Handling</a>
+        <a href="#omen-overview" class="toc-level-2">Overview</a>
+        <a href="#omen-my-role" class="toc-level-2">My Role</a>
+        <a href="#omen-game-ideation" class="toc-level-2">Game Ideation and Pitch</a>
     
-        <a href="#omen-puzzle-design" class="sub-link">Puzzle Design & Implementation</a>
-        <a href="#omen-kitchen-fire" class="sub-sub-link">Kitchen Fire Puzzle</a>
-        <a href="#omen-dining-room" class="sub-sub-link">Dining Room Puzzle System</a>
+        <a href="#omen-core-systems" class="toc-level-2">Core System & Mechanics</a>
+        <a href="#omen-object-interaction" class="toc-level-3">Object Interaction System</a>
+        <a href="#omen-object-pushing" class="toc-level-3">Object Pushing System</a>
+        <a href="#omen-mirror-system" class="toc-level-3">Mirror System & Collision Handling</a>
     
-        <a href="#omen-tools" class="sub-link">Designer, Debugging, & Development Tools</a>
-        <a href="#omen-challenges" class="sub-link">Challenges & Growth</a>
-        <a href="#omen-takeaways" class="sub-link">Key Takeaways</a>
+        <a href="#omen-puzzle-design" class="toc-level-2">Puzzle Design & Implementation</a>
+        <a href="#omen-kitchen-fire" class="toc-level-3">Kitchen Fire Puzzle</a>
+        <a href="#omen-dining-room" class="toc-level-3">Dining Room Puzzle System</a>
+    
+        <a href="#omen-tools" class="toc-level-2">Designer, Debugging, & Development Tools</a>
+        <a href="#omen-challenges" class="toc-level-2">Challenges & Growth</a>
+        <a href="#omen-takeaways" class="toc-level-2">Key Takeaways</a>
 
         
-        <a href="#elem">Elementokens!</a>
+        <a href="#elem" class="toc-level-1">Elementokens!</a>
     
-        <a href="#elem-overview" class="sub-link">Overview</a>
-        <a href="#elem-my-role" class="sub-link">My Role</a>
+        <a href="#elem-overview" class="toc-level-2">Overview</a>
+        <a href="#elem-my-role" class="toc-level-2">My Role</a>
     
-        <a href="#elem-core-systems" class="sub-link">Core Systems & Contributions</a>
-        <a href="#elem-animation-system" class="sub-sub-link">Animation System</a>
-        <a href="#elem-ui-text" class="sub-sub-link">UI & Text Rendering</a>
-        <a href="#elem-context-menu" class="sub-sub-link">Context-Sensitive Action Menu</a>
-        <a href="#elem-wizard" class="sub-sub-link">Wizard Gameplay Integration</a>
-        <a href="#elem-pathfinding" class="sub-sub-link">Pathfinding</a>
+        <a href="#elem-core-systems" class="toc-level-2">Core Systems & Contributions</a>
+        <a href="#elem-animation-system" class="toc-level-3">Animation System</a>
+        <a href="#elem-ui-text" class="toc-level-3">UI & Text Rendering</a>
+        <a href="#elem-context-menu" class="toc-level-3">Context-Sensitive Action Menu</a>
+        <a href="#elem-wizard" class="toc-level-3">Wizard Gameplay Integration</a>
+        <a href="#elem-pathfinding" class="toc-level-3">Pathfinding</a>
     
-        <a href="#elem-debug" class="sub-link">Debugging & Build Systems</a>
-        <a href="#elem-takeaways" class="sub-link">Key Takeaways</a>
+        <a href="#elem-debug" class="toc-level-2">Debugging & Build Systems</a>
+        <a href="#elem-takeaways" class="toc-level-2">Key Takeaways</a>
       </nav>
-    </details>
+
+      <a href="#top" class="toc-back-to-top">⬆ Back to Top</a>
   </aside>
+    
+  <button class="toc-toggle" id="tocToggle" aria-label="Open navigation">
+    ☰
+  </button>
   
   <main>
     <section class="centered">

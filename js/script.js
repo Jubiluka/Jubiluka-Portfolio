@@ -1,11 +1,9 @@
-const colorButton = document.getElementById("colorButton");
-if (colorButton) {
-  colorButton.addEventListener("click", () => {
-  const colors = ["#fce4ec", "#f3e5f5", "#e3f2fd", "#e8f5e9", "#fff3e0"];
-  const random = colors[Math.floor(Math.random() * colors.length)];
-  document.body.style.backgroundColor = random;
-});
-}
+//FOOTER
+fetch("/Jubiluka-Portfolio/footer.html")
+  .then(res => res.text())
+  .then(data => {
+    document.getElementById("footer-placeholder").innerHTML = data;
+  });
 
 //PHOTO GALLERY CODE vvv
 document.addEventListener("DOMContentLoaded", () => {

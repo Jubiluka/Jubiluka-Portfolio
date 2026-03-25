@@ -459,6 +459,12 @@ h1, h2, h3, h4 {
   .toc-close {
     display: block;
   }
+
+  .projects-page .hero,
+  .projects-page footer,
+  .projects-main {
+    margin-left: 0;
+  }
 }
 
 /*CONTACT CARDS*/

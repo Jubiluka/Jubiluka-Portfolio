@@ -267,6 +267,64 @@ ul
   }
 }
 
+/*NAV BAR*/
+.page-layout {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 2rem;
+  align-items: start;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.toc {
+  position: sticky;
+  top: 1rem;
+  align-self: start;
+}
+
+.toc details {
+  background: white;
+  border: 1px solid #ddd;
+  padding: 1rem;
+}
+
+.toc summary {
+  font-weight: bold;
+  cursor: pointer;
+  margin-bottom: 0.75rem;
+}
+
+.toc nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.toc a {
+  color: #333;
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.toc a:hover {
+  text-decoration: underline;
+}
+
+.sub-link {
+  padding-left: 1rem;
+  font-size: 0.9rem;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+h3, h4 {
+  scroll-margin-top: 1rem;
+}
+
 /*CONTACT CARDS*/
 .contact-links {
   display: flex;
